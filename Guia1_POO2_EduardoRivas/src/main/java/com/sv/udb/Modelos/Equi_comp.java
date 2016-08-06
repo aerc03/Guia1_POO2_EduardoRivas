@@ -5,6 +5,8 @@
  */
 package com.sv.udb.Modelos;
 
+import java.sql.Blob;
+
 /**
  *
  * @author aerc
@@ -17,6 +19,15 @@ public class Equi_comp {
     private String ip_addr_equi_comp;
     private String fech_alta;
     private String fech_baja;
+    private Blob esta;
+
+    public Blob getEsta() {
+        return esta;
+    }
+
+    public void setEsta(Blob esta) {
+        this.esta = esta;
+    }
 
     public String getFech_baja() {
         return fech_baja;
@@ -81,7 +92,7 @@ public class Equi_comp {
     public Equi_comp() {
     }
 
-    public Equi_comp(int codi_equi_comp, String nomb_equi_comb, Luga_acce codi_luga_acce, String mac_addr_equi_comp, String ip_addr_equi_comp, String fech_alta, String fech_baja) {
+    public Equi_comp(int codi_equi_comp, String nomb_equi_comb, Luga_acce codi_luga_acce, String mac_addr_equi_comp, String ip_addr_equi_comp, String fech_alta, String fech_baja, Blob esta) {
         this.codi_equi_comp = codi_equi_comp;
         this.nomb_equi_comb = nomb_equi_comb;
         this.codi_luga_acce = codi_luga_acce;
@@ -89,13 +100,10 @@ public class Equi_comp {
         this.ip_addr_equi_comp = ip_addr_equi_comp;
         this.fech_alta = fech_alta;
         this.fech_baja = fech_baja;
+        this.esta = esta;
     }
 
     
-    
-    public Equi_comp(String nomb_equi_comb) {
-        this.nomb_equi_comb = nomb_equi_comb;
-    }
     
     
     

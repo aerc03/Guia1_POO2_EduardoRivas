@@ -5,8 +5,8 @@
  */
 package com.sv.udb.Ctrl;
 
-import com.sv.udb.Modelos.Equi_comp;
 import com.sv.udb.Modelos.Luga_acce;
+import com.sv.udb.Modelos.Tipo_pers;
 import com.sv.udb.recursos.Conexion;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -19,19 +19,19 @@ import java.util.List;
  *
  * @author aerc
  */
-public class CtrlLuga_acce {
-    public List<Luga_acce> consTodo()
+public class Tipo_persCtrl {
+    public List<Tipo_pers> consTodo()
     {
-        List<Luga_acce> resp = new ArrayList<>();
+        List<Tipo_pers> resp = new ArrayList<>();
         Connection cn = new Conexion().getConn();
         try
         {
-            String consulta = "SELECT * FROM luga_acce";
+            String consulta = "SELECT * FROM tipo_pers";
             PreparedStatement cmd = cn.prepareStatement(consulta);
             ResultSet rs = cmd.executeQuery();
             while(rs.next())
             {
-                    resp.add(new Luga_acce(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getBlob(5)));
+                resp.add(new Tipo_pers(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getBlob(5)));
             }
         }
         catch(Exception ex)
