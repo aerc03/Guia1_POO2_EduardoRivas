@@ -14,11 +14,20 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel='stylesheet prefetch' href='css/bootstrap.css'>
         <title>JSP Page</title>
+        <style>
+            .container-fluid{
+                
+            }
+        </style>
     </head>
     <body>
+        <div class="container-fluid">
+            <div class="row-fluid">
         <form action="PDF.jsp" method="POST" target="_black">
-            <div class="col-sm-12 formEL">
+            <h1>Reporte 1</h1>
+            <div class="span3">
                     <jsp:useBean id="Unid_Orga_Bean" class="com.sv.udb.Ctrl.UnidOrgaCtrl" scope="page" />
                     <select id="cmbUnidOrga" name="cmbUnidOrga">
                         <c:forEach items="${Unid_Orga_Bean.consTodo()}" var="fila">
@@ -26,11 +35,12 @@
                         </c:forEach>
                     </select>
             </div>
-            <input type="submit" value="Enviar">
+            <input type="submit" class="btn btn-primary" value="Enviar">
         </form>
                     <br><br><br>
         <form action="PDF2.jsp" method="POST" target="_black">
-            <div class="col-sm-12 formEL">
+            <h1>Reporte 2</h1>
+            <div class="span3">
                     <jsp:useBean id="Pers" class="com.sv.udb.Ctrl.PersCtrl" scope="page" />
                     <select id="cmbPers" name="cmbPers">
                         <c:forEach items="${Pers.consTodo()}" var="fila">
@@ -38,15 +48,18 @@
                         </c:forEach>
                     </select>
             </div>
-            <input type="submit" value="Enviar">
+            <input type="submit" class="btn btn-primary" value="Enviar">
         </form>     
-                    
+          <br><br><br>          
         <form action="PDF3.jsp" method="POST" target="_black">
-            <div class="col-sm-12 formEL">
+            <h1>Reporte 3</h1>
+            <div class="span3">
                 <input id="I" name="I" type="date">
                 <input id="F" name="F" type="date">
             </div>
-            <input type="submit" value="Enviar">
+            <input type="submit" class="btn btn-primary" value="Enviar">
         </form>
+          </div>
+                    </div>
     </body>
 </html>
