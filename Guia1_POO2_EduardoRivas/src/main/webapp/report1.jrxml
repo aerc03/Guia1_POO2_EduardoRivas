@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="90b4cc10-b7f9-497f-b9e3-b2d958024200">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from usua]]>
+	</queryString>
+	<field name="CODI_USUA" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CODI_PERS" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ACCE_USUA" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CONT_USUA" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FECH_CAMB_CLAV_USUA" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FECH_ALTA" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FECH_BAJA" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ESTA" class="java.lang.Object">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="dcf0df92-6a7f-43c0-924a-2eefd18ca649"/>
+				<text><![CDATA[CODI_USUA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="132" y="2" width="100" height="20" uuid="2823dad7-ac15-4a9d-8f7f-b5cc27e43035"/>
+				<text><![CDATA[FECH_ALTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="298" y="2" width="100" height="20" uuid="c9121723-29fe-445d-a764-914e9f6d1535"/>
+				<text><![CDATA[FECH_BAJA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="3f9077d8-1a0a-4de9-a47f-5d81152b1d81"/>
+				<textFieldExpression><![CDATA[$F{CODI_USUA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="132" y="1" width="100" height="20" uuid="e7a625a8-19d6-4a70-9e75-15fde1410b68"/>
+				<textFieldExpression><![CDATA[$F{FECH_ALTA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="298" y="1" width="100" height="20" uuid="a3b82db7-a808-4e04-8988-5970de50b58d"/>
+				<textFieldExpression><![CDATA[$F{FECH_BAJA}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
